@@ -25,15 +25,10 @@ export default function Login() {
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-default login-submit">Login</button>
+        <button class="btn btn-default login-submit" data-dismiss="modal">Login</button>
       </div>
     </div>
   </div>
-</div>
-
-<div class="text-center">
-  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
-    Modal Login Form</a>
 </div>
     `;
 }

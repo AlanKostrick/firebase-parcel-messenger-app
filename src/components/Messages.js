@@ -1,26 +1,22 @@
 export default function Messages(messages) {
   return `
         <div>
-        <h1>My Messages </h1>
         ${messages.docs
           .map(message => {
             const messageData = message.data();
             return `
-                <section class='main-content__messages'>
+                <section class='card main-content__messages'>
+                  <div class='card-body'>
                     <h3>${messageData.title}</h3>
                     <p>${messageData.content}</p>
                     <input class='delete-message__id' type='hidden' value="${message.id}">
-                    <button class='delete-message__submit'>&times</button>
-                    <button class='edit-message__submit'>...</button>
-                </section>
+                    <button class='btn btn-danger delete-message__submit'>&times</button>
+                    <button class='btn btn-info edit-message__submit'>...</button>
+                  </div>
+                 </section>
                 `;
           })
           .join('')}
         </div>
-        <section class='add-message'>
-          <input class='add-message__messageTitle' type='text' name='title' placeholder='message title'>
-          <input class='add-message__messageBody type='text' name='content' placeholder='message content'>
-          <button class='add-message__submit'>Submit</button>
-      </section>
         `;
 }
