@@ -123,11 +123,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Header;
+exports.default = void 0;
 
-function Header() {
+var _default = function _default() {
   return "\n             <nav class= 'nav'>\n                  <h1 class= 'class='shadow p-3 mb-5 bg-white rounded nav-logo'>MyMessagesApp</h1>\n                  <ul class= 'navbar navbar-expand-lg navbar-light bg-light nav-list'>\n                      <li class= 'nav-link nav-list__home'>Home</li>\n                      <li class= 'nav-link nav-list__messages'>Messages</li>\n                      <li class= 'nav-link nav-list__signup'>Sign Up</li>\n                      <li class= 'nav-link nav-list__login' data-toggle=\"modal\" data-target=\"#modalLoginForm\">Login</li>\n                      <li class= 'nav-link nav-list__logout'>Logout</li>\n                  </ul>\n              </nav>\n          ";
-}
+};
+
+exports.default = _default;
 },{}],"src/features/header.js":[function(require,module,exports) {
 "use strict";
 
@@ -62742,11 +62744,13 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Login;
+exports.default = void 0;
 
-function Login() {
+var _default = function _default() {
   return "\n    <div class=\"modal fade login-form\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n  aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header text-center\">\n        <h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body mx-3\">\n        <div class=\"md-form mb-5\">\n          <i class=\"fas fa-envelope prefix grey-text\"></i>\n          <input type=\"email\" id=\"defaultForm-email\" class=\"form-control validate\">\n          <label data-error=\"wrong\" data-success=\"right\" for=\"defaultForm-email\">Your email</label>\n        </div>\n\n        <div class=\"md-form mb-4\">\n          <i class=\"fas fa-lock prefix grey-text\"></i>\n          <input type=\"password\" id=\"defaultForm-pass\" class=\"form-control validate\">\n          <label data-error=\"wrong\" data-success=\"right\" for=\"defaultForm-pass\">Your password</label>\n        </div>\n\n      </div>\n      <div class=\"modal-footer d-flex justify-content-center\">\n        <button class=\"btn btn-default login-submit\" data-dismiss=\"modal\">Login</button>\n      </div>\n    </div>\n  </div>\n</div>\n    ";
-}
+};
+
+exports.default = _default;
 },{}],"src/global-functions/global-functions.js":[function(require,module,exports) {
 "use strict";
 
@@ -62834,14 +62838,16 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Messages;
+exports.default = void 0;
 
-function Messages(messages) {
+var _default = function _default(messages) {
   return "\n        <div>\n        ".concat(messages.docs.map(function (message) {
     var messageData = message.data();
     return "\n                <section class='card main-content__messages'>\n                  <div class='card-body'>\n                    <h3>".concat(messageData.title, "</h3>\n                    <p>").concat(messageData.content, "</p>\n                    <input class='delete-message__id' type='hidden' value=\"").concat(message.id, "\">\n                    <button class='btn btn-danger delete-message__submit'>&times</button>\n                    <button class='btn btn-info edit-message__submit'>...</button>\n                  </div>\n                 </section>\n                ");
   }).join(''), "\n        </div>\n        ");
-}
+};
+
+exports.default = _default;
 },{}],"src/features/navMessages.js":[function(require,module,exports) {
 "use strict";
 
@@ -62860,8 +62866,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function navMessages() {
   //get request
-  var messagesButton = document.querySelector(".nav-list__messages");
-  messagesButton.addEventListener("click", function () {
+  var messagesButton = document.querySelector('.nav-list__messages');
+  messagesButton.addEventListener('click', function () {
     _globalFunctions.default.getDatabaseCollectionContext().get().then(function (messages) {
       var auth = _firebase.default.auth();
 
@@ -62869,7 +62875,7 @@ function navMessages() {
         if (user) {
           _globalFunctions.default.getRootContext().innerHTML = (0, _Messages.default)(messages);
         } else {
-          _globalFunctions.default.getRootContext().innerHTML = "\n            <div class=\"jumbotron\">\n            <h1 class=\"display-4\">You need to log in!</h1>\n            <p class=\"lead\">We value our content and our people, you can't just post without getting proper access.</p>\n            <hr class=\"my-4\">\n            <p>In a bit smaller text...please remember we value our people, you can't just post without logging in.</p>\n            <p class=\"lead\">\n              <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\n            </p>\n          </div>\n            ";
+          _globalFunctions.default.getRootContext().innerHTML = "\n                        <div class=\"jumbotron\">\n                        <h1 class=\"display-4\">You need to log in!</h1>\n                        <p class=\"lead\">We value our content and our people, you can't just post without getting proper access.</p>\n                        <hr class=\"my-4\">\n                        <p>In a bit smaller text...please remember we value our people, you can't just post without logging in.</p>\n                        <p class=\"lead\">\n                            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\n                        </p>\n                    </div>\n            ";
         }
       });
     });
@@ -62886,11 +62892,13 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Home;
+exports.default = void 0;
 
-function Home() {
+var _default = function _default() {
   return "\n    <figure class=\"figure\">\n        <img src=\"https://images.unsplash.com/photo-1523292720785-762f75b66b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80\" class=\"figure-img img-fluid rounded\" alt=\"A generic square placeholder image with rounded corners in a figure.\">\n        <figcaption class=\"figure-caption\">MyMessages is a place where people can write each other...messages.</figcaption>\n    </figure>\n    ";
-}
+};
+
+exports.default = _default;
 },{}],"src/features/home.js":[function(require,module,exports) {
 "use strict";
 
@@ -62906,8 +62914,8 @@ var _globalFunctions = _interopRequireDefault(require("../global-functions/globa
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function home() {
-  var homeButton = document.querySelector(".nav-list__home");
-  homeButton.addEventListener("click", function () {
+  var homeButton = document.querySelector('.nav-list__home');
+  homeButton.addEventListener('click', function () {
     _globalFunctions.default.getRootContext().innerHTML = (0, _Home.default)();
   });
 }
@@ -80709,7 +80717,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61427" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52578" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

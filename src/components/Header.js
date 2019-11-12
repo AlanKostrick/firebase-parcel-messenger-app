@@ -1,5 +1,5 @@
-export default function Header() {
-  return `
+export default () => {
+    return `
              <nav class= 'nav'>
                   <h1 class= 'class='shadow p-3 mb-5 bg-white rounded nav-logo'>MyMessagesApp</h1>
                   <ul class= 'navbar navbar-expand-lg navbar-light bg-light nav-list'>
@@ -11,4 +11,4 @@ export default function Header() {
                   </ul>
               </nav>
           `;
-}
+};

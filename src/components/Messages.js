@@ -1,8 +1,8 @@
-export default function Messages(messages) {
-  return `
+export default messages => {
+    return `
         <div>
         ${messages.docs
-          .map(message => {
+        .map(message => {
             const messageData = message.data();
             return `
                 <section class='card main-content__messages'>
@@ -15,8 +15,8 @@ export default function Messages(messages) {
                   </div>
                  </section>
                 `;
-          })
-          .join('')}
+        })
+        .join('')}
         </div>
         `;
-}
+};

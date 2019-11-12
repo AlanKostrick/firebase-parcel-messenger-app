@@ -1,5 +1,5 @@
-export default function Login() {
-  return `
+export default () => {
+    return `
     <div class="modal fade login-form" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -31,4 +31,4 @@ export default function Login() {
   </div>
 </div>
     `;
-}
+};
